@@ -1,0 +1,19 @@
+{
+    "name": "vendor/tester",
+    "description": "Description of project tester.",
+    "authors": [
+        {
+            "name": "aone",
+            "email": "juliharri@gmail.com"
+        }
+    ],
+   "require": {
+      "curl/curl": "dev-master"
+       
+    },
+    
+    "autoload": {
+		
+
+    }
+}

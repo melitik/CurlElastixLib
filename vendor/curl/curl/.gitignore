@@ -1,0 +1,8 @@
+vendor/*
+*.orig
+.buildpath
+.project
+.settings/*
+composer.lock
+*~
+tests/phpunit_report/*
