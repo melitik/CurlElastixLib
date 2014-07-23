@@ -63,11 +63,11 @@ $add_siptrunk = [
     'keepcid' => 'off',
     'maxchans' => '',
     'disabletrunk' => '',
-    'failtrunk' => '',
-    'failtrunk_enable' => '1',
-    'prepend_digit[0]' => '',
-    'pattern_prefix[0]' => '',
-    'pattern_pass[0]' => '',
+        //    'failtrunk' => '',
+        //    'failtrunk_enable' => '1',
+        //    'prepend_digit[0]' => '',
+        //    'pattern_prefix[0]' => '',
+        //    'pattern_pass[0]' => '',
 //dial rules wizard
     'autopop' => '',
 //outbound dial prefix 
@@ -75,7 +75,7 @@ $add_siptrunk = [
 //outgoing setting 
     'channelid' => 'voiptrunk',
 //peer details 
-    'peerdetails' => 'host=voiprakyat.or.id,username=140749:secret=VURRN1,type=peer,qualify=yes,context=from-trunk,insecure=port,invite',
+     'peerdetails' => 'host=voiprakyat.or.id,username=140749:secret=VURRN1,type=peer,qualify=yes,context=from-trunk,insecure=port,invite',
 //user context 
     'usercontext' => 'voiptrunk',
     'userconfig' => '',
