@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 
 use Curl\Curl;
 
-$urlget = 'https://192.168.1.240/config.php/';
+$urlget = 'https://192.168.56.101/config.php/';
 
 
 $username = 'admin';
@@ -16,7 +16,7 @@ $cookiefile = tempnam("/tmp", "cookies");
 $user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/34.0.1847.116 Chrome/34.0.1847.116 Safari/537.36';
 
 $curl = new Curl();
-$curl->get('https://192.168.1.240/index.php');
+$curl->get('https://192.168.56.101/index.php');
 $curl->setUserAgent($user_agent);
 $curl->setOpt(CURLOPT_HEADER, 1);
 $curl->setopt(CURLOPT_RETURNTRANSFER, TRUE);
@@ -28,7 +28,7 @@ $curl->setopt(CURLOPT_COOKIEJAR, $cookiefile);
 //
 //
 //
-$url_login = 'https://192.168.1.240/index.php';
+$url_login = 'https://192.168.56.101/index.php';
 $login = [
     'input_user' => urldecode($username),
     'input_pass' => urldecode($password),
@@ -42,7 +42,7 @@ $curl->post($url_login, $login);
 
 
 //Add Extension form1
-$url_ext = 'https://192.168.1.240/config.php';
+$url_ext = 'https://192.168.56.101/config.php';
 $ext_sip = [
     'display' => 'extensions',
     'type' => 'setup',
@@ -52,17 +52,17 @@ $ext_sip = [
 $curl->post($url_ext, $ext_sip);
 
 //Add SIP ext form2
-$url_addext = 'https://192.168.1.240/config.php?type=setup&display=extensions';
+$url_addext = 'https://192.168.56.101/config.php?type=setup&display=extensions';
 $url_sipexten = [
     'action' => 'add',
     'extdisplay' => '',
-    'action' => 'add',
-    'extdisplay' => '',
+//    'action' => 'add',
+//    'extdisplay' => '',
     //add extension
-    'extension' => '2003',
-    'name' => 'arif',
+    'extension' => '2005',
+    'name' => 'iqbal',
     'cid_masquerade' => '',
-    'sipname' => '2003',
+    'sipname' => '2005',
     //Extension Option
     'outboundcid' => '',
     'ringtimer' => '0',
@@ -78,7 +78,7 @@ $url_sipexten = [
     'newdidcid' => '',
     //Device Option
     'devinfo_secret_origional' => '',
-    'devinfo_secret' => 'arif2003',
+    'devinfo_secret' => 'iqbal2005',
     'devinfo_dtmfmode' => 'rfc2833',
     'devinfo_canreinvite' => 'no',
     'devinfo_context' => 'from-internal',
